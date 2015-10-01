@@ -3,7 +3,7 @@ describe("pigLatin", function() {
     expect(pigLatin("apple")).to.equal("applay");
   });
 
-  it("moves the first consonant of a word to the end", function() {
-    expect(pigLatin("ball")).to.equal("allb");
+  it("moves the first consonant of a word to the end and add 'ay'", function() {
+    expect(pigLatin("ball")).to.equal("allbay");
   });
 });

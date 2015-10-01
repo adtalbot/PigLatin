@@ -7,10 +7,20 @@ var pigLatin = function(userInput) {
     } else {
       var newWord = userInput.split("");
       var newWord2 = newWord.shift();
-      var result = (newWord.join("") + newWord2);
+      var result = (newWord.join("") + newWord2 + "ay");
       return result;
-
-
     }
   };
 };
+
+$(document).ready(function() {
+  $("form#pigLatin").submit(function(event) {
+    var userInput = $("input#userInput").val();
+    var result = pigLatin(userInput);
+
+    $(".result").text(result);
+
+    $("#result").show();
+    event.preventDefault();
+  });
+});
